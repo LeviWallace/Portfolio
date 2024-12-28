@@ -91,7 +91,7 @@ export default function IndexPage() {
                         ))}
                       </ul>
                     ) : (
-                      <a href={item.href !== "#" ? item.href : ""} target="_blank" className={`${item.style} font-play font-thin text-foreground z-10 whitespace-pre-wrap`}>
+                      <a href={item.href !== "#" ? item.href : ""} className={`${item.style} tracking-tighter font-play font-thin text-foreground z-10 whitespace-pre-wrap`}>
                         {item.title}
                       </a>
                     )}

@@ -1,5 +1,3 @@
-import { url } from "inspector";
-
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
@@ -7,13 +5,13 @@ export const siteConfig = {
   description: "Levi Wallace's Portfolio",
   titles: [
     [
-      { title: "Experience", href: "#experience", style: "font-bold tracking-tighter" },
-      { title: "Projects", href: "#projects", style: "font-bold tracking-tighter" },
-      { title: "Education", href: "#education", style: "font-bold tracking-tighter" },
-      { title: "Leadership", href: "#leadership", style: "font-bold tracking-tighter" }
+      { title: "Experience", href: "#experience", style: "font-bold" },
+      { title: "Projects", href: "#projects", style: "font-bold" },
+      { title: "Education", href: "#education", style: "font-bold" },
+      { title: "Leadership", href: "#leadership", style: "font-bold" }
     ],
     [
-      { title: "Levi Wallace", href: "#", style: "text-8xl tracking-tighter" },
+      { title: "Levi Wallace", href: "#", style: "" },
       { title: "", href: "#", style: "" },
       { title: "", href: "#", style: "" },
       { title: "", href: "#", style: "" }
@@ -27,7 +25,7 @@ export const siteConfig = {
     [
       { title: "Rose-Hulman Institute of Technology\nB.S. in Computer Science\nMinor in Mathematics\nMinor in Theater & Drama", href: "#", style: "text-sm tracking-tighter" },
       { title: "", href: "#", style: "" },
-      { title: "Contact:", href: "#", style: "font-bold tracking-tighter" },
+      { title: "Contact:", href: "#", style: "font-bold" },
       { title: "*", href: "#", style: "" }
     ]
   ],
