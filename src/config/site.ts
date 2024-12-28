@@ -5,13 +5,13 @@ export const siteConfig = {
   description: "Levi Wallace's Portfolio",
   titles: [
     [
-      { title: "Experience", href: "#experience", style: "font-bold" },
-      { title: "Projects", href: "#projects", style: "font-bold" },
-      { title: "Education", href: "#education", style: "font-bold" },
-      { title: "Leadership", href: "#leadership", style: "font-bold" }
+      { title: "Experience", href: "#experience", style: "" },
+      { title: "Projects", href: "#projects", style: "" },
+      { title: "Education", href: "#education", style: "" },
+      { title: "Leadership", href: "#leadership", style: "" }
     ],
     [
-      { title: "Levi Wallace", href: "#", style: "" },
+      { title: "Levi Wallace", href: "#", style: "text-2xl" },
       { title: "", href: "#", style: "" },
       { title: "", href: "#", style: "" },
       { title: "", href: "#", style: "" }
@@ -68,6 +68,36 @@ export const siteConfig = {
         "Excelled in explaining topics such as functions and methods, by abstracting the idea into tangible examples"
       ]
     }
+  ],
+  projects: [
+    {
+      field: "Simulation Software",
+      title: "RoseLap6",
+      description: "Tract Premium helps you start saver investments insights covering.",
+      technologies: ["React", "Tailwind", "Node"],
+      github: "https://github.com/LeviWallace/RoseLap6"
+    },
+    {
+      field: "Simulation Software",
+      title: "RoseLap6",
+      description: "Tract Premium helps you start saver investments insights covering.",
+      technologies: ["React", "Tailwind", "Node"],
+      github: "https://github.com/LeviWallace/RoseLap6"
+    },
+    {
+      field: "Simulation Software",
+      title: "RoseLap6",
+      description: "Tract Premium helps you start saver investments insights covering.",
+      technologies: ["React", "Tailwind", "Node"],
+      github: "https://github.com/LeviWallace/RoseLap6"
+    },
+    {
+      field: "Simulation Software",
+      title: "RoseLap6",
+      description: "Tract Premium helps you start saver investments insights covering.",
+      technologies: ["React", "Tailwind", "Node"],
+      github: "https://github.com/LeviWallace/RoseLap6"
+    },
   ],
   links: [
     {
