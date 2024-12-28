@@ -1,69 +1,92 @@
+import { url } from "inspector";
+
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Vite + NextUI",
-  description: "Make beautiful websites regardless of your design experience.",
-  navItems: [
-    {
-      label: "Home",
-      href: "/",
-    },
-    {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    },
+  name: "LEVI WALLACE",
+  description: "Levi Wallace's Portfolio",
+  titles: [
+    [
+      { title: "Experience", href: "#experience", style: "font-bold tracking-tighter" },
+      { title: "Projects", href: "#projects", style: "font-bold tracking-tighter" },
+      { title: "Education", href: "#education", style: "font-bold tracking-tighter" },
+      { title: "Leadership", href: "#leadership", style: "font-bold tracking-tighter" }
+    ],
+    [
+      { title: "Levi Wallace", href: "#", style: "text-8xl tracking-tighter" },
+      { title: "", href: "#", style: "" },
+      { title: "", href: "#", style: "" },
+      { title: "", href: "#", style: "" }
+    ],
+    [
+      { title: "", href: "#", style: "" },
+      { title: "", href: "#", style: "" },
+      { title: "", href: "#", style: "" },
+      { title: "", href: "#", style: "" }
+    ],
+    [
+      { title: "Rose-Hulman Institute of Technology\nB.S. in Computer Science\nMinor in Mathematics\nMinor in Theater & Drama", href: "#", style: "text-sm tracking-tighter" },
+      { title: "", href: "#", style: "" },
+      { title: "Contact:", href: "#", style: "font-bold tracking-tighter" },
+      { title: "*", href: "#", style: "" }
+    ]
   ],
-  navMenuItems: [
+  experience: [
     {
-      label: "Profile",
-      href: "/profile",
+      title: "Rose-Hulman Grand Prix Engineering [Formula SAE]",
+      time: "Aug 2024 - Present",
+      position: "Full Stack Software Engineer",
+      description: [
+        "Uncovered and translated a deprecated database, containing various vehicles, tracks, configurations, etc",
+        "Simulated and developed various electric vehicle sweeps in a Flask Python back end, and a React front end"
+      ]
     },
     {
-      label: "Dashboard",
-      href: "/dashboard",
+      title: "Sensitic Technologies",
+      time: "June 2023 - August 2024",
+      position: "Software Engineering Intern",
+      description: [
+        "Developed and designed low-level camera code in Visual Studio",
+        "Written in C++ and a corresponding User Interface in Python",
+        "Analyzed and Processed data captured from the camera to produce a real-time display"
+      ]
     },
     {
-      label: "Projects",
-      href: "/projects",
+      title: "Sensitic Technologies",
+      time: "June 2023 - August 2023",
+      position: "Software Engineering Intern",
+      description: [
+        "Developed a data processing and visualization tool designed to intake live sensor information from rockets and construct a visual representation of their telemetry",
+        "Written mainly in C# using Unity, reading AIS (Automatic Identification System) data",
+        "Demonstrated rocket trajectory using telemetry data"
+      ]
     },
     {
-      label: "Team",
-      href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
-    },
+      title: "theCoderSchool",
+      time: "Jun 2021 - August 2021",
+      position: "Coding Tutor",
+      description: [
+        "Taught Python to children of ages 10 through 12",
+        "Excelled in explaining topics such as functions and methods, by abstracting the idea into tangible examples"
+      ]
+    }
   ],
-  links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
-  },
+  links: [
+    {
+      label: "Github",
+      url: "https://github.com/LeviWallace"
+    },
+    {
+      label: "LinkedIn",
+      url: "https://www.linkedin.com/in/levi-wallace/"
+    },
+    {
+      label: "Instagram",
+      url: "https://www.instagram.com/iamleviwallace/"
+    },
+    {
+      label: "Email",
+      url: "mailto:leviwallace2002@gmail.com"
+    }
+  ]
 };

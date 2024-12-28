@@ -1,71 +1,127 @@
-import { Accordion, AccordionItem } from "@nextui-org/accordion";
-import { Divider } from "@nextui-org/divider";
+import { GithubIcon } from "@/components/icons";
+import { ThemeSwitch } from "@/components/theme-switch";
+import { useInView } from "framer-motion";
+import { useRef, useState } from "react";
+import { siteConfig } from "@/config/site";
 
+interface Job {
+  title: string;
+  time: string;
+  position: string;
+  description: string[];
+}
 
-const titles = [
-  {
-      name: "Experience",
-      indicator: "☉",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  },
-  {
-    name: "Projects",
-    indicator: "★",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  },
-  {
-    name: "About Me",
-    indicator: "♦",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  }
-]
+interface ExperienceSectionProps {
+  job: Job;
+  index: number;
+}
+
+function ExperienceSection({ job, index }: ExperienceSectionProps) {
+  const [isHovering, setIsHovering] = useState(false);
+
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true });
+
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
+
+  return (
+    <div ref={ref} key={index} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className={`my-2 p-3 ${isHovering ? "bg-background" : "bg-foreground"} transition ease-in-out
+        ${isInView ? "opacity-100" : "opacity-0"}
+    `}>      
+      <div className="flex justify-between">
+        <h3 className={`text-2xl ${isHovering ? "text-foreground" : "text-background"} font-play tracking-tighter`}>{job.title}</h3>
+        <h3 className={`${isHovering ? "text-foreground" : "text-background"}  font-play leading-loose tracking-tighter`}>{job.time}</h3>
+      </div>
+      <div className={`border-t-1 ${isHovering ? "border-foreground" : "border-background"}  py-2`}>
+        <h3 className={`italic ${isHovering ? "text-foreground" : "text-background"}  font-play tracking-tighter mb-2`}>{job.position}</h3>
+        <ul className="">
+          {job.description.map((desc, index) => (
+            <li key={index} className={`${isHovering ? "text-foreground" : "text-background"} font-play tracking-tighter mb-1`}>{desc}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="flex justify-end">
+          <GithubIcon className={`${isHovering ? "text-foreground" : "invisible"}`}/>
+      </div>
+    </div>
+  )
+};
 
 
 export default function IndexPage() {
+
+
   return (
-      <section className="grid grid-cols-5 p-10 h-screen bg-background bg-stripes">
-        <div className="col-start-1 col-span-3">
-          <span className="text-[180px] font-play text-primary">Levi Wallace</span>
-        </div>
-        <div className="col-start-4 col-span-2">
-            <div className="grid grid-cols-2">
-              <span className="text-[50px] font-play text-foreground">Orange</span>
-              <Accordion>
-                {titles.map((title, index) => (
-                  <AccordionItem
-                    key={index}
-                    aria-label={`Accordion ${index + 1}`}
-                    className="font-play text-primary"
-                    title={
-                        <p className="flex flex-row">
-                          <div>
-                            <h1 className="text-[50px] my-3 mb-10 font-play text-foreground uppercase">{title.name}</h1>
-                          </div>
-                          <br />
-                        </p>
-                    }
-                    indicator={
-                      <p className="flex">
-                        <span className="text-[14px] font-play font-bold text-foreground uppercase">{title.indicator} </span>
-                      </p>
-                    }
-                  >
-                    {<div className=" mb-2 mx-2 font-play text-[20px] font-thin">
-                      <div className="flex justify-between">
-                        <div className="col-span-1">Sensitic Technologies</div>
-                        <div className="col-span-1"><Divider orientation="vertical"/></div>
-                        <div className="col-span-1 text-foreground-50">2021</div>
-                      </div>
-                    </div>}
-                  </AccordionItem>
+    <>
+      {/* %% OVERLAY */}
+      <div className="flex justify-end fixed w-full h-full bg-transparent z-20 pointer-events-none">
+        
+        <h1 className="mix-blend-multiply font-play tracking-tighter whitespace-break-spaces pointer-events-auto m-2"><ThemeSwitch /></h1>
+      </div>
+
+      {/* %% LANDING PAGE */}
+      <div>
+        <div className="h-screen flex bg-background -z-10">
+          <div className="flex flex-col w-1/6 mt-10">
+            <svg className="w-full h-full">
+              <circle cx="50%" cy="50%" r="40%" fill="hsl(var(--foreground))" />
+            </svg>
+            <svg className="w-full h-full">
+              <circle cx="50%" cy="50%" r="40%" fill="hsl(var(--foreground))" />
+            </svg>
+          </div>
+
+          <div className="w-1/2 mx-auto">
+            {siteConfig.titles.map((row, rowIndex) => (
+              <div key={rowIndex} className="grid grid-cols-4 p-2 h-1/4 gap-2">
+                {row.map((item, colIndex) => (
+                  <div key={colIndex} className="col-start-auto col-span-1 w-full -z-5 border-primary border-1 transition ease-in-out hover:bg-primary [&>*]:hover:text-background">
+                    {item.title == "*" ? (
+                      <ul>
+                        {siteConfig.links.map((link) => (
+                          <li key={link.label}>
+                            <a href={link.url} target="_blank" className={`${item.style} font-play font-thin text-foreground z-10 tracking-tighter`}>{link.label} </a>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <a href={item.href !== "#" ? item.href : ""} target="_blank" className={`${item.style} font-play font-thin text-foreground z-10 whitespace-pre-wrap`}>
+                        {item.title}
+                      </a>
+                    )}
+                  </div>
                 ))}
-              </Accordion>
-            
-            </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-col w-1/6">
+            <svg className="w=full h-full">
+              <circle cx="50%" cy="50%" r="40%" fill="hsl(var(--primary))" />
+            </svg>
+            <svg className="w=full h-full">
+              <circle cx="50%" cy="50%" r="40%" fill="hsl(var(--primary))" />
+            </svg>
+          </div>
         </div>
-        <div className="col-start-2 col-span-4 bg-stripes">
-            <p className="text-[50px] font-play">Welcome to my portolio</p>
+
+        { /* %% EXPERIENCE PAGE */}
+        <div className="w-full h-full bg-foreground p-3">
+          <h1 id="experience" className="text-background font-play text-9xl tracking-tighter">Experience</h1>
+          <div className="w-3/4 m-auto">
+            {siteConfig.experience.map((job, index) => (
+              <ExperienceSection job={job} index={index} key={index}/>
+            ))}
+          </div>
         </div>
-      </section>
+
+      </div>
+    </>
   );
 }
