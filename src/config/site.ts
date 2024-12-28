@@ -1,5 +1,12 @@
 export type SiteConfig = typeof siteConfig;
 
+export const degreeStyles: {[key: string]: string} = {
+  "MA": "italic",
+  "CSSE": "font-bold",
+  "ENGL": "underline",
+}
+
+
 export const siteConfig = {
   name: "LEVI WALLACE",
   description: "Levi Wallace's Portfolio",
@@ -99,6 +106,154 @@ export const siteConfig = {
       github: "https://github.com/LeviWallace/RoseLap6"
     },
   ],
+  education: {
+    school: "Rose-Hulman Institute of Technology",
+    gpa: "3.23",
+    degrees: [
+      {
+        title: "Minor in Mathematics",
+        key: "MA",
+      },
+      {
+        title: "BS. in Computer Science",
+        key: "CSSE",
+      },
+      {
+        title: "Minor in Theater & Drama",
+        key: "ENGL",
+      },
+    ],
+    time: "Aug 2021 - May 2025",
+    classes: [
+      {
+        title: "Object-Oriented Software Development",
+        subject: "CSSE",
+      }, {
+        title: "Calculus I",
+        subject: "MA",
+      }, {
+        title: "Physics I",
+        subject: "",
+      }, {
+        title: "Physics I Lab",
+        subject: "",
+      }, {
+        title: "Rhetoric and Composition",
+        subject: "",
+      }, {
+        title: "Foundations for RHIT Success",
+        subject: "",
+      }, {
+        title: "Introduction to Web Programming",
+        subject: "CSSE",
+      }, {
+        title: "Calculus II",
+        subject: "MA",
+      }, {
+        title: "Physics II",
+        subject: "",
+      }, {
+        title: "Physics II Lab",
+        subject: "",
+      }, {
+        title: "Anatomy & Physiology",
+        subject: "",
+      }, {
+        title: "Introduction to Systems Programming",
+        subject: "CSSE",
+      }, {
+        title: "Introduction to Digital Systems",
+        subject: "CSSE",
+      }, {
+        title: "Calculus III",
+        subject: "MA",
+      }, {
+        title: "General Chemistry I",
+        subject: "",
+      }, {
+        title: "General Chemistry I Lab",
+        subject: "",
+      }, {
+        title: "Data Structures & Algorithm Analysis",
+        subject: "CSSE",
+      }, {
+        title: "Computer Architecture I",
+        subject: "CSSE",
+      }, {
+        title: "Matrix Algebra & Differential Equations I",
+        subject: "MA",
+      }, {
+        title: "Programming Language Concepts",
+        subject: "CSSE",
+      }, {
+        title: "American Drama",
+        subject: "ENGL",
+      }, {
+        title: "Introduction to Proofs",
+        subject: "MA",
+      }, {
+        title: "Technical & Professional Communication",
+        subject: "",
+      }, {
+        title: "Cybercrime & Digital Forensics",
+        subject: "CSSE",
+      }, {
+        title: "Introduction to Macroeconomics",
+        subject: "",
+      }, {
+        title: "Intro Probablity w/ Application to Statistics",
+        subject: "MA",
+      }, {
+        title: "International Relations",
+        subject: "",
+      }, {
+        title: "Introduction to East Asia",
+        subject: "",
+      }, {
+        title: "Software Design",
+        subject: "CSSE",
+      }, {
+        title: "Technical Entrepreneurship",
+        subject: "",
+      }, {
+        title: "Irish Drama",
+        subject: "ENGL",
+      }, {
+        title: "Introduction to Database Systems",
+        subject: "CSSE",
+      }, {
+        title: "Ethics in Computing",
+        subject: "CSSE",
+      }, {
+        title: "African American Drama",
+        subject: "ENGL",
+      }, {
+        title: "Combinatorics",
+        subject: "MA",
+      }, {
+        title: "Acting: American Method",
+        subject: "ENGL",
+      }, {
+        title: "Software Requirements Engineering",
+        subject: "CSSE",
+      }, {
+        title: "Theory of Computation",
+        subject: "MA",
+      }, {
+        title: "Engineering Statistics I",
+        subject: "MA",
+      }, {
+        title: "Artificial Intelligence",
+        subject: "CSSE",
+      }, {
+        title: "Matrix Algebra & Differential Equations II",
+        subject: "MA",
+      }, {
+        title: "Capstone Design I",
+        subject: "",
+      },
+    ]
+  },
   links: [
     {
       label: "Github",

@@ -1,8 +1,8 @@
 import { GithubIcon} from "@/components/icons";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { useInView } from "framer-motion";
+import { motion, useInView, useTransform, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
-import { siteConfig } from "@/config/site";
+import { siteConfig, degreeStyles } from "@/config/site";
 
 interface Job {
   title: string;
@@ -53,8 +53,49 @@ function ExperienceSection({ job, index }: ExperienceSectionProps) {
   )
 };
 
+interface ClassCarouselProps {
+  ref: React.RefObject<HTMLDivElement>;
+}
+
+function ClassCarousel({ ref }: ClassCarouselProps) {
+  const refernce = ref || useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+  })
+
+  const [classes] = useState(siteConfig.education.classes);
+
+  
+  const scrollSpeeds = [
+    useTransform(scrollYProgress, [0, 0.5, 1], ["-500px", "0px", "100px"]),
+    useTransform(scrollYProgress, [0, 0.5, 1], ["-200px", "0px", "300px"]),
+    useTransform(scrollYProgress, [0, 0.5, 1], ["-300px", "0px", "300px"]),
+    useTransform(scrollYProgress, [0, 0.5, 1], ["-300px", "0px", "200px"]),
+    useTransform(scrollYProgress, [0, 0.5, 1], ["100px", "0px", "-50px"]),
+    useTransform(scrollYProgress, [0, 0.5, 1], ["-100px", "0px", "100px"]),
+  ]
+
+  console.log(scrollYProgress)
+  return (
+    <div ref={refernce}>
+      {classes.map((course, index) => (
+        <motion.div style={{x: scrollSpeeds[index]}} key={index} className="flex flex-row mt-4 gap-3 overflow-hidden">
+          {classes.slice(index * 7, index * 7 + 7).map((course, subIndex) => (
+            <h3 key={subIndex} className={`${degreeStyles[course.subject]} text-foreground font-play text-2xl tracking-tighter mx-2 whitespace-nowrap`}>{course.title}</h3>
+          ))}
+        </motion.div>
+      ))}
+      
+      
+    </div>
+  )
+}
+
 
 export default function IndexPage() {
+
+  const ref = useRef(null);
+
   return (
     <>
       {/* %% OVERLAY */}
@@ -142,6 +183,34 @@ export default function IndexPage() {
               </div>
             </div>
           ))}
+          </div>
+        </div>
+        
+        { /* %% EDUCATION PAGE */}
+        <div>
+            <div ref={ref} className="w-full h-screen bg-background p-3">
+            <div className="flex justify-between">
+              <h1 id="education" className="text-foreground font-play text-9xl tracking-tighter">Education</h1>
+              <h1 className="text-foreground font-play text-5xl font-bold tracking-tighter mx-10 my-5">GPA: {siteConfig.education.gpa}</h1>
+            </div>
+            <div className="flex flex-col m-4">
+              <h1 className="text-foreground font-play text-6xl font-black tracking-tighter w-full text-center">ROSE-HULMAN INSTITUTE OF TECHNOLOGY</h1>
+              <div className="flex flex-row justify-around mt-4 gap-3">
+                {siteConfig.education.degrees.map((degree, index) => (
+                  <h3 key={degree.key} className={`${degreeStyles[degree.key]} text-foreground font-play text-2xl tracking-tighter mx-2`}>{degree.title}</h3>
+                ))}
+              </div>
+              <div className="overflow-hidden">
+                <ClassCarousel ref={ref}/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        { /* %% LEADERSHIP PAGE */}
+        <div>
+          <div className="w-full h-screen bg-foreground p-3">
+            <h1 id="leadership" className="text-primary font-play text-9xl tracking-tighter">Leadership</h1>
           </div>
         </div>
       </div>
