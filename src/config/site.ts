@@ -210,14 +210,14 @@ export const siteConfig = {
         title: "Introduction to East Asia",
         subject: "",
       }, {
+        title: "Irish Drama",
+        subject: "ENGL",
+      }, {
         title: "Software Design",
         subject: "CSSE",
       }, {
         title: "Technical Entrepreneurship",
         subject: "",
-      }, {
-        title: "Irish Drama",
-        subject: "ENGL",
       }, {
         title: "Introduction to Database Systems",
         subject: "CSSE",
@@ -270,6 +270,10 @@ export const siteConfig = {
     {
       label: "Email",
       url: "mailto:leviwallace2002@gmail.com"
+    },
+    {
+      label: "Resume",
+      url: "https://www.linkedin.com/in/levi-wallace/"
     }
   ]
 };
