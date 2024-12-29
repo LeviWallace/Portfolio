@@ -1,5 +1,4 @@
 import { siteConfig } from "@/config/site";
-import { useState } from "react";
 
 
 interface LeadershipProps {
@@ -7,21 +6,29 @@ interface LeadershipProps {
         title: string;
         position: string;
         time: string;
+        roles: string[];
     };
 }
 
 function Leadership({ position }: LeadershipProps) {
+
     return (
-        <div className="flex flex-row justify-between z-10 mix-blend-color-dodge">
-            <h1 className="text-primary font-play text-5xl tracking-tighter">
-            {position.title}
-            </h1>
-            <h1 className="text-primary font-play text-5xl tracking-tighter">
-            {position.position}
-            </h1>
-            <h1 className="text-primary font-play text-5xl tracking-tighter">
-            {position.time}
-            </h1>
+        <div 
+            className="flex flex-row justify-between z-10 mix-blend-color-dodge border-b-2 border-secondary"
+        >
+            {
+                <>
+                    <h1 className="text-primary font-play text-5xl tracking-tighter flex-shrink-0">
+                        {position.title}
+                    </h1>
+                    <h1 className="text-primary font-play text-5xl tracking-tighter flex-shrink-0">
+                        {position.position}
+                    </h1>
+                    <h1 className="text-primary font-play text-5xl tracking-tighter">
+                        {position.time}
+                    </h1>
+                </>
+            }
         </div>
     );
 }
@@ -43,7 +50,7 @@ export default function LeadershipSection() {
             </div>
 
             <h1 id="leadership" className="relative text-primary font-play text-9xl tracking-tighter z-10">Leadership</h1>
-            <div className="flex flex-col h-3/4 gap-3 justify-around mx-4">
+            <div className="flex flex-col h-3/4 gap-3 justify-between mx-4">
                 {siteConfig.leadership.map((position, index) => (
                     <Leadership key={index} position={position} />
                 ))}
