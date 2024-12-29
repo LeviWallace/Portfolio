@@ -5,7 +5,7 @@ export default function ProjectsSection() {
     return (
         <div className="w-full h-screen bg-primary p-3">
             <h1 id="projects" className="text-foreground font-play text-9xl tracking-tighter">Projects</h1>
-            <div className="w-4/5 m-auto my-4 flex flex-wrap justify-around align- gap-2 gap-y-6">
+            <div className="w-4/5 m-auto h-4/5 flex flex-wrap justify-around items-center gap-4">
                 {siteConfig.projects.map((project, index) => (
                 <div key={index} className="bg-background p-4 pb-3 rounded-xl w-[32%] hover:scale-105 transition ease-in-out">
                 <h4 className="text-foreground font-thin font-play tracking-tight">{project.field}</h4>

@@ -253,7 +253,33 @@ export const siteConfig = {
         subject: "",
       },
     ]
-  },
+  }, leadership: [
+    {
+      title: "Sigma Nu Fraternity",
+      position: "Vice President",
+      time: "Jan 2024 Dec 2024"
+    },
+    {
+      title: "Interfraternity Council",
+      position: "Representative",
+      time: "Jan 2024 Dec 2024"
+    },
+    {
+      title: "Student Government",
+      position: "Senator",
+      time: "Jan 2024 May 2024"
+    },
+    {
+      title: "Shakespeare Club",
+      position: "Event Organizer",
+      time: "Jan 2024 Dec 2024"
+    },
+    {
+      title: "Sigma Nu Fraternity",
+      position: "Recorder",
+      time: "Jan 2023 Dec 2023"
+    }
+  ],
   links: [
     {
       label: "Github",
