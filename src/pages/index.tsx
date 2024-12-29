@@ -1,5 +1,5 @@
-import { GithubIcon} from "@/components/icons";
-import { ThemeSwitch } from "@/components/theme-switch";
+import { GithubIcon } from "@/components/icons";
+import ThemeSwitch from "@/components/theme-switch";
 import { motion, useInView, useTransform, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 import { siteConfig, degreeStyles } from "@/config/site";
@@ -13,7 +13,7 @@ interface Job {
 
 interface ExperienceSectionProps {
   job: Job;
-  index: number;
+  index: number; 
 }
 
 function ExperienceSection({ job, index }: ExperienceSectionProps) {
