@@ -1,7 +1,7 @@
 import { useTheme } from "@/hooks/use-theme";
 
 const ToggleTheme = () => {
-    const { theme, isLight, toggleTheme } = useTheme();
+    const { isLight, toggleTheme } = useTheme();
 
     return (
         <div onClick={toggleTheme} className="cursor-pointer">
