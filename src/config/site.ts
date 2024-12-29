@@ -19,9 +19,9 @@ export const siteConfig = {
     ],
     [
       { title: "Levi Wallace", href: "#", style: "text-2xl" },
-      { title: "", href: "#", style: "" },
-      { title: "", href: "#", style: "" },
-      { title: "", href: "#", style: "" }
+      { title: "", href: "", style: "" },
+      { title: "", href: "", style: "" },
+      { title: "", href: "", style: "" }
     ],
     [
       { title: "", href: "#", style: "" },
@@ -126,11 +126,11 @@ export const siteConfig = {
     time: "Aug 2021 - May 2025",
     classes: [
       {
-        title: "Calculus I",
-        subject: "MA",
-      }, {
         title: "Object-Oriented Software Development",
         subject: "CSSE",
+      }, {
+        title: "Calculus I",
+        subject: "MA",
       }, {
         title: "Physics I",
         subject: "",
@@ -209,17 +209,16 @@ export const siteConfig = {
       }, {
         title: "Introduction to East Asia",
         subject: "",
-      }, 
-      {
-        title: "Irish Drama",
-        subject: "ENGL",
-      },{
+      }, {
         title: "Software Design",
         subject: "CSSE",
       }, {
         title: "Technical Entrepreneurship",
         subject: "",
-      },  {
+      }, {
+        title: "Irish Drama",
+        subject: "ENGL",
+      }, {
         title: "Introduction to Database Systems",
         subject: "CSSE",
       }, {
