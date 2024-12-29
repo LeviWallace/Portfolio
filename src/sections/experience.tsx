@@ -33,7 +33,7 @@ interface Job {
           ${isInView ? "opacity-100" : "opacity-0"}
       `}>      
         <div className="flex justify-between">
-          <h3 className={`text-2xl ${isHovering ? "text-foreground" : "text-background"} font-play tracking-tighter`}>{job.title}</h3>
+          <h3 className={`lg:text-2xl text-xl ${isHovering ? "text-foreground" : "text-background"} font-play tracking-tighter`}>{job.title}</h3>
           <h3 className={`${isHovering ? "text-foreground" : "text-background"}  font-play leading-loose tracking-tighter`}>{job.time}</h3>
         </div>
         <div className={`border-t-1 ${isHovering ? "border-foreground" : "border-background"}  py-2`}>
@@ -51,8 +51,8 @@ interface Job {
 export default function ExperienceSection() {
     return (
         <div className="w-full h-full bg-foreground p-3">
-            <h1 id="experience" className="text-background font-play text-9xl tracking-tighter">Experience</h1>
-            <div className="w-3/4 m-auto">
+            <h1 id="experience" className="text-background font-play lg:text-9xl text-7xl tracking-tighter">Experience</h1>
+            <div className="lg:w-3/4 lg:m-auto w-full">
                 {siteConfig.experience.map((job, index) => (
                     <Experience job={job} index={index} key={index} />
                 ))}

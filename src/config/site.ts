@@ -68,7 +68,7 @@ export const siteConfig = {
     },
     {
       title: "theCoderSchool",
-      time: "Jun 2021 - August 2021",
+      time: "June 2021 - August 2021",
       position: "Coding Tutor",
       description: [
         "Taught Python to children of ages 10 through 12",

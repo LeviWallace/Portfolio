@@ -13,7 +13,7 @@ interface ProjectProps {
 
 function Project({ project }: ProjectProps) {
     return (
-        <div className="bg-background p-4 pb-3 rounded-xl w-[32%] hover:scale-105 transition ease-in-out">
+        <div className="bg-background p-4 pb-3 rounded-xl xl:x-[32%] lg:w-[48%] w-full hover:scale-105 transition ease-in-out">
             <h4 className="text-foreground font-thin font-play tracking-tight">{project.field}</h4>
             <h3 className="text-foreground font-play font-black text-2xl tracking-tighter">{project.title}</h3>
             <p className="text-foreground font-play tracking-tighter font-thin my-2">{project.description}</p>
@@ -33,9 +33,9 @@ function Project({ project }: ProjectProps) {
 
 export default function ProjectsSection() {
     return (
-        <div className="w-full h-screen bg-primary p-3">
-            <h1 id="projects" className="text-foreground font-play text-9xl tracking-tighter">Projects</h1>
-            <div className="flex flex-row flex-wrap gap-4 w-3/4 justify-start mt-7 mx-auto">
+        <div className="w-full lg:h-screen h-fit bg-primary p-3">
+            <h1 id="projects" className="text-foreground font-play lg:text-9xl text-7xl tracking-tighter">Projects</h1>
+            <div className="flex flex-row flex-wrap gap-4 lg:w-3/4 w-full justify-start mt-7 mx-auto">
                 {siteConfig.projects.map((project, index) => (
                     <Project project={project} key={index} />
             ))}
