@@ -46,9 +46,6 @@ function ExperienceSection({ job, index }: ExperienceSectionProps) {
           ))}
         </ul>
       </div>
-      <div className="flex justify-end">
-          <GithubIcon className={`${isHovering ? "text-foreground" : "invisible"}`}/>
-      </div>
     </div>
   )
 };
@@ -107,7 +104,7 @@ export default function IndexPage() {
       </div>
 
       {/* %% LANDING PAGE */}
-      <div className="h-screen flex bg-background -z-10">
+      <div className="h-screen flex bg-background justify-center -z-10">
         <div className="flex flex-col w-1/6 mt-10">
           <svg className="w-full h-full">
             <circle cx="50%" cy="50%" r="40%" fill="hsl(var(--foreground))" />
@@ -117,7 +114,7 @@ export default function IndexPage() {
           </svg>
         </div>
 
-        <div className="w-1/2 mx-auto">
+        <div className="w-1/2">
             <div className="grid grid-cols-4 p-2 h-1/4 gap-2">
                 {siteConfig.titles[0].map((title) => (
                   <a href={title.href} className="tracking-tighter font-play font-thin text-foreground z-10 whitespace-pre-wrap transition ease-in-out hover:bg-primary [&>*]:hover:text-background">
@@ -132,7 +129,7 @@ export default function IndexPage() {
 
                     </div>
                   :
-                  <a href={title.href} className={`text-4xl tracking-tighter font-play font-thin text-foreground z-10 whitespace-pre-wrap transition ease-in-out hover:bg-primary [&>*]:hover:text-background`}>
+                  <a href={title.href} className={`text-5xl tracking-tighter font-play font-thin text-foreground z-10 whitespace-pre-wrap transition ease-in-out hover:bg-primary [&>*]:hover:text-background`}>
                     {title.title}
                   </a>
                 ))}
@@ -197,7 +194,7 @@ export default function IndexPage() {
         <h1 id="projects" className="text-foreground font-play text-9xl tracking-tighter">Projects</h1>
         <div className="w-4/5 m-auto my-4 flex flex-wrap justify-around align- gap-2 gap-y-6">
           {siteConfig.projects.map((project, index) => (
-            <div key={index} className="bg-background p-4 pb-3 rounded-xl w-[32%] hover:scale-105 hover:translate-y-3 transition ease-in-out">
+            <div key={index} className="bg-background p-4 pb-3 rounded-xl w-[32%] hover:scale-105 transition ease-in-out">
             <h4 className="text-foreground font-thin font-play tracking-tight">{project.field}</h4>
             <h3 className="text-foreground font-play font-black text-2xl tracking-tighter">{project.title}</h3>
             <p className="text-foreground font-play tracking-tighter font-thin my-2">{project.description}</p>

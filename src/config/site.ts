@@ -18,7 +18,7 @@ export const siteConfig = {
       { title: "Leadership", href: "#leadership", style: "" }
     ],
     [
-      { title: "Levi Wallace", href: "#", style: "text-2xl" },
+      { title: "Levi S. Wallace", href: "#", style: "text-2xl" },
       { title: "", href: "", style: "" },
       { title: "", href: "", style: "" },
       { title: "", href: "", style: "" }
@@ -80,7 +80,7 @@ export const siteConfig = {
     {
       field: "Simulation Software",
       title: "RoseLap6",
-      description: "Tract Premium helps you start saver investments insights covering.",
+      description: "Laptime Simulation Software for the Rose-Hulman Grand Prix Engineering Team",
       technologies: ["React", "Tailwind", "Node"],
       github: "https://github.com/LeviWallace/RoseLap6"
     },
@@ -115,7 +115,7 @@ export const siteConfig = {
         key: "MA",
       },
       {
-        title: "BS. in Computer Science",
+        title: "Bachelor of Science in Computer Science",
         key: "CSSE",
       },
       {
@@ -126,11 +126,11 @@ export const siteConfig = {
     time: "Aug 2021 - May 2025",
     classes: [
       {
-        title: "Object-Oriented Software Development",
-        subject: "CSSE",
-      }, {
         title: "Calculus I",
         subject: "MA",
+      }, {
+        title: "Object-Oriented Software Development",
+        subject: "CSSE",
       }, {
         title: "Physics I",
         subject: "",
@@ -138,14 +138,14 @@ export const siteConfig = {
         title: "Physics I Lab",
         subject: "",
       }, {
+        title: "Introduction to Web Programming",
+        subject: "CSSE",
+      }, {
         title: "Rhetoric and Composition",
         subject: "",
       }, {
         title: "Foundations for RHIT Success",
         subject: "",
-      }, {
-        title: "Introduction to Web Programming",
-        subject: "CSSE",
       }, {
         title: "Calculus II",
         subject: "MA",
@@ -273,7 +273,7 @@ export const siteConfig = {
     },
     {
       label: "Resume",
-      url: "https://www.linkedin.com/in/levi-wallace/"
+      url: "https://drive.google.com/file/d/1THmXUEp6KDt9xvEW1aFmlmu6bLEdMEHR/view"
     }
   ]
 };
