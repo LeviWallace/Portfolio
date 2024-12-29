@@ -81,7 +81,7 @@ export const siteConfig = {
       field: "Simulation Software",
       title: "RoseLap6",
       description: "Laptime Simulation Software for the Rose-Hulman Grand Prix Engineering Team",
-      technologies: ["React", "Tailwind", "Node"],
+      technologies: ["Python", "React", "C"],
       github: "https://github.com/LeviWallace/RoseLap6"
     },
     {
@@ -253,7 +253,58 @@ export const siteConfig = {
         subject: "",
       },
     ]
-  },
+  }, leadership: [
+    {
+      title: "Sigma Nu Fraternity",
+      position: "Vice President",
+      time: "Jan 2024 Dec 2024",
+      roles: [
+        "Managed a team of 10 members",
+        "Organized and executed 5 events",
+        "Increased membership by 30%"
+      ]
+    },
+    {
+      title: "Interfraternity Council",
+      position: "Representative",
+      time: "Jan 2024 Dec 2024",
+      roles: [
+        "Managed a team of 10 members",
+        "Organized and executed 5 events",
+        "Increased membership by 30%"
+      ]
+    },
+    {
+      title: "Student Government",
+      position: "Senator",
+      time: "Jan 2024 May 2024",
+      roles: [
+        "Managed a team of 10 members",
+        "Organized and executed 5 events",
+        "Increased membership by 30%"
+      ]
+    },
+    {
+      title: "Shakespeare Club",
+      position: "Event Organizer",
+      time: "Jan 2024 Dec 2024",
+      roles: [
+        "Managed a team of 10 members",
+        "Organized and executed 5 events",
+        "Increased membership by 30%"
+      ]
+    },
+    {
+      title: "Sigma Nu Fraternity",
+      position: "Recorder",
+      time: "Jan 2023 Dec 2023",
+      roles: [
+        "Managed a team of 10 members",
+        "Organized and executed 5 events",
+        "Increased membership by 30%"
+      ]
+    }
+  ],
   links: [
     {
       label: "Github",
