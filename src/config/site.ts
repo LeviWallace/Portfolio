@@ -12,28 +12,28 @@ export const siteConfig = {
   description: "Levi Wallace's Portfolio",
   titles: [
     [
-      { title: "Experience", href: "#experience", style: "" },
-      { title: "Projects", href: "#projects", style: "" },
-      { title: "Education", href: "#education", style: "" },
-      { title: "Leadership", href: "#leadership", style: "" }
+      { title: "Experience", href: "#experience", style: "", key: 1 },
+      { title: "Projects", href: "#projects", style: "", key: 2 },
+      { title: "Education", href: "#education", style: "", key: 3 },
+      { title: "Leadership", href: "#leadership", style: "", key: 4 }
     ],
     [
-      { title: "Levi S. Wallace", href: "#", style: "text-2xl" },
-      { title: "", href: "", style: "" },
-      { title: "", href: "", style: "" },
-      { title: "", href: "", style: "" }
+      { title: "Levi S. Wallace", href: "#", style: "text-2xl", key: 5 },
+      { title: "", href: "", style: "", key: 6 },
+      { title: "", href: "", style: "", key: 7 },
+      { title: "", href: "", style: "", key: 8 }
     ],
     [
-      { title: "", href: "#", style: "" },
-      { title: "", href: "#", style: "" },
-      { title: "", href: "#", style: "" },
-      { title: "", href: "#", style: "" }
+      { title: "", href: "#", style: "", key: 9 },
+      { title: "", href: "#", style: "", key: 10 },
+      { title: "", href: "#", style: "", key: 11 },
+      { title: "", href: "#", style: "", key: 12 }
     ],
     [
-      { title: "Rose-Hulman Institute of Technology\nB.S. in Computer Science\nMinor in Mathematics\nMinor in Theater & Drama", href: "#", style: "text-sm tracking-tighter" },
-      { title: "", href: "#", style: "" },
-      { title: "Contact:", href: "#", style: "font-bold" },
-      { title: "*", href: "#", style: "" }
+      { title: "Rose-Hulman Institute of Technology\nB.S. in Computer Science\nMinor in Mathematics\nMinor in Theater & Drama", href: "#", style: "text-sm tracking-tighter", key: 13 },
+      { title: "", href: "#", style: "", key: 14 },
+      { title: "Contact:", href: "#", style: "font-bold", key: 15 },
+      { title: "*", href: "#", style: "", key: 16 }
     ]
   ],
   experience: [
