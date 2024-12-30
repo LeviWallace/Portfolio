@@ -85,26 +85,26 @@ export const siteConfig = {
       github: "https://github.com/LeviWallace/RoseLap6"
     },
     {
-      field: "Simulation Software",
-      title: "RoseLap6",
-      description: "Tract Premium helps you start saver investments insights covering.",
-      technologies: ["React", "Tailwind", "Node"],
-      github: "https://github.com/LeviWallace/RoseLap6"
+      field: "Java Source Code Analysis",
+      title: "Cassandra",
+      description: "A Java source code parser written to detect both syntactical and design principle errors",
+      technologies: ["Java", "ASM"],
+      github: "https://github.com/LeviWallace/Cassandra"
     },
-    {
-      field: "Simulation Software",
-      title: "RoseLap6",
-      description: "Tract Premium helps you start saver investments insights covering.",
-      technologies: ["React", "Tailwind", "Node"],
-      github: "https://github.com/LeviWallace/RoseLap6"
-    },
-    {
-      field: "Simulation Software",
-      title: "RoseLap6",
-      description: "Tract Premium helps you start saver investments insights covering.",
-      technologies: ["React", "Tailwind", "Node"],
-      github: "https://github.com/LeviWallace/RoseLap6"
-    },
+    // {
+    //   field: "Simulation Software",
+    //   title: "RoseLap6",
+    //   description: "Tract Premium helps you start saver investments insights covering.",
+    //   technologies: ["React", "Tailwind", "Node"],
+    //   github: "https://github.com/LeviWallace/RoseLap6"
+    // },
+    // {
+    //   field: "Simulation Software",
+    //   title: "RoseLap6",
+    //   description: "Tract Premium helps you start saver investments insights covering.",
+    //   technologies: ["React", "Tailwind", "Node"],
+    //   github: "https://github.com/LeviWallace/RoseLap6"
+    // },
   ],
   education: {
     school: "Rose-Hulman Institute of Technology",
