@@ -18,7 +18,7 @@ function Project({ project }: ProjectProps) {
             <h3 className="text-foreground font-play font-black text-2xl tracking-tighter">{project.title}</h3>
             <p className="text-foreground font-play tracking-tighter font-thin my-2">{project.description}</p>
             <div className="border-t-1 border-foregroud flex justify-between">
-                <div className="flex flex-row w-2/3 justify-around mt-2">
+                <div className="flex flex-row w-2/3 justify-start space-x-6 mt-2">
                 {project.technologies.map((tech, index) => (
                     <p key={index} className="font-thin text-foreground">{tech}</p>
                 ))}
