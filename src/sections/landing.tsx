@@ -15,7 +15,7 @@ export default function LandingSection() {
         <div className="lg:w-1/2 w-full">
             <div className="grid grid-cols-4 p-2 h-1/4 gap-2">
                 {siteConfig.titles[0].map((title) => (
-                  <a href={title.href} className="tracking-tighter font-play font-thin text-foreground z-10 whitespace-pre-wrap transition ease-in-out hover:bg-primary [&>*]:hover:text-background">
+                  <a href={title.href} key={title.key} className="tracking-tighter font-play font-thin text-foreground z-10 whitespace-pre-wrap transition ease-in-out hover:bg-primary [&>*]:hover:text-background">
                     <p>{title.title}</p>
                   </a>
                 ))}
@@ -23,11 +23,11 @@ export default function LandingSection() {
             <div className="grid grid-cols-4 p-2 h-1/4 gap-2">
                 {siteConfig.titles[1].map((title) => (
                   title.title == "" ? 
-                    <div className="text-4xl tracking-tighter font-play font-thin text-foreground z-10 whitespace-pre-wrap transition ease-in-out md:hover:bg-primary md:[&>*]:hover:text-background">
+                    <div key={title.key} className="text-4xl tracking-tighter font-play font-thin text-foreground z-10 whitespace-pre-wrap transition ease-in-out md:hover:bg-primary md:[&>*]:hover:text-background">
 
                     </div>
                   :
-                  <a href={title.href} className={`text-5xl tracking-tighter font-play font-thin text-foreground z-10 whitespace-pre-wrap transition ease-in-out hover:bg-primary [&>*]:hover:text-background`}>
+                  <a href={title.href} key={title.key} className={`text-5xl tracking-tighter font-play font-thin text-foreground z-10 whitespace-pre-wrap transition ease-in-out hover:bg-primary [&>*]:hover:text-background`}>
                     <p>{title.title}</p>
                   </a>
                 ))}
@@ -35,11 +35,11 @@ export default function LandingSection() {
             <div className="grid grid-cols-4 p-2 h-1/4 gap-2">
                 {siteConfig.titles[2].map((title) => (
                   title.title == "" ? 
-                    <div className="text-foreground z-10 whitespace-pre-wrap transition ease-in-out hover:bg-primary [&>*]:hover:text-background">
+                    <div key={title.key} className="text-foreground z-10 whitespace-pre-wrap transition ease-in-out hover:bg-primary [&>*]:hover:text-background">
 
                     </div>
                   :
-                  <a href={title.href} className={`text-4xl tracking-tighter font-play font-thin text-foreground z-10 whitespace-pre-wrap transition ease-in-out hover:bg-primary [&>*]:hover:text-background`}>
+                  <a key={title.key} href={title.href} className={`text-4xl tracking-tighter font-play font-thin text-foreground z-10 whitespace-pre-wrap transition ease-in-out hover:bg-primary [&>*]:hover:text-background`}>
                     {title.title}
                   </a>
                 ))}
@@ -54,13 +54,13 @@ export default function LandingSection() {
               <div className="hidden xl:block tracking-tighter font-play font-thin text-foreground z-10 whitespace-pre-wrap transition ease-in-out hover:bg-primary [&>*]:hover:text-background">
 
               </div>
-              <div className="text-right tracking-tighter font-play font-thin text-foreground z-10 whitespace-pre-wrap transition ease-in-out hover:bg-primary [&>*]:hover:text-background">
+              <div className="text-right cursor-default tracking-tighter font-play font-thin text-foreground z-10 whitespace-pre-wrap transition ease-in-out hover:bg-primary [&>*]:hover:text-background">
                 <p>Contact:</p>
               </div>
               <div className="tracking-tighter font-play font-thin text-foreground z-10 whitespace-pre-wrap transition ease-in-out hover:bg-primary [&>*]:hover:text-background">
-                <ul>
+                <ul key={"list-links"}>
                   {siteConfig.links.map((link) => (
-                    <li><a href={link.url} target="_blank">{link.label}</a></li>
+                    <li key={link.label}><a href={link.url} target="_blank">{link.label}</a></li>
                   ))}
                 </ul>
               </div>
