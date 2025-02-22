@@ -35,7 +35,7 @@ function Leadership({ position }: LeadershipProps) {
 
 export default function LeadershipSection() {
     return (
-        <div className="relative w-full lg:h-screen h-fit bg-secondary p-3">
+        <div className="relative w-full h-screen bg-secondary scroll-my-10">
             <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center z-0">
                 <svg className="lg:w-1/2 w-full h-full opacity-60">
                     <defs>

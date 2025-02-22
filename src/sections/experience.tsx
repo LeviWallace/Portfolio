@@ -50,7 +50,7 @@ interface Job {
 
 export default function ExperienceSection() {
     return (
-        <div className="w-full h-full bg-foreground p-3">
+        <div className="w-full min-h-screen h-fit bg-foreground">
             <h1 id="experience" className="text-background font-play lg:text-9xl text-7xl tracking-tighter">Experience</h1>
             <div className="lg:w-3/4 lg:m-auto w-full">
                 {siteConfig.experience.map((job, index) => (

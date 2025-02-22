@@ -45,7 +45,7 @@ export default function EducationSection() {
 
   return (
     <div>
-      <div ref={ref} className="w-full lg:h-screen h-fit bg-background p-3">
+      <div ref={ref} className="w-full h-screen bg-background">
         <div className="flex lg:flex-row flex-col justify-between mb-10">
           <h1 id="education" className="text-foreground font-play lg:text-9xl text-7xl tracking-tighter">Education</h1>
           <h1 className="text-foreground font-play text-5xl font-bold tracking-tighter mr-10 lg:my-7">GPA: {siteConfig.education.gpa}</h1>

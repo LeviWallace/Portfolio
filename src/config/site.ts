@@ -87,9 +87,30 @@ export const siteConfig = {
     {
       field: "Java Source Code Analysis",
       title: "Cassandra",
-      description: "A Java source code parser written to detect both syntactical and design principle errors",
-      technologies: ["Java", "ASM"],
+      description: "A source code parser enhancing Java code, improving code quality and maintainability",
+      technologies: ["Java", "ASM", "Maven"],
       github: "https://github.com/LeviWallace/Cassandra"
+    },
+    {
+      field: "Microsoft SQL Server Full Stack Application",
+      title: "Campus Animal Tracker",
+      description: "An MS SQL project used to track animal sitings around Rose-Hulman",
+      technologies: ["MS SQL Server", "Java", "Tyhmeleaf", "Spring Boot"],
+      github: "https://github.com/LeviWallace/Cassandra"
+    },
+    {
+      field: "Addition to the XV6 Operating System",
+      title: "XV6 with threads",
+      description: "Addition to the XV6 operating system adding thread support",
+      technologies: ["C", "Linux", "Vim", "GDB", "Valgrind", "QEMU"],
+      github: "https://github.com/LeviWallace/xv6-riscv-threads"
+    },
+    {
+      field: "Movie Rating Discord Bot",
+      title: "Carnival Bot",
+      description: "A Discord Bot written during COVID-19 to manage friend group movie ratings",
+      technologies: ["HTML", "JavaScript", "CSS", "Python"],
+      github: "https://github.com/LeviWallace/Carnival"
     },
     // {
     //   field: "Simulation Software",
@@ -324,7 +345,7 @@ export const siteConfig = {
     },
     {
       label: "Resume",
-      url: "https://drive.google.com/file/d/1THmXUEp6KDt9xvEW1aFmlmu6bLEdMEHR/view"
+      url: "https://drive.google.com/file/d/1Rnbt1YNByBYiOvufO1P_BCjlk0Bf-T3u/view?usp=drive_link"
     }
   ]
 };
